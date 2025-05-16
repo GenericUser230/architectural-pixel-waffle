@@ -2,7 +2,11 @@
 import os
 from base64 import standard_b64decode
 from json import load
-from groq import Groq
+try:
+    from groq import Groq
+except ModuleNotFoundError:
+    os.system('pip install groq')
+    from groq import Groq
 
 #### ---- CONTROL VARIABLES ---- ####
 b64 = False # is info.txt in Base64 or not?
