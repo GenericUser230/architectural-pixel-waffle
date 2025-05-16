@@ -1,3 +1,103 @@
+"""
+Hey! Nick here, the developer of NoAI. Thanks for using my service!
+As a little reward for peering into the code, have a customization option!
+"""
+selector = 0
+name = 'User'
+"""
+Normally when you use NoAI, you enter prompts through an input space that is preceded by
+">>> ". But you can change the selector number to customize this preceding string.
+    Selector number 0: ">>> "
+    Selector number 1: " -> "
+    Selector number 2: ">))>"
+    Selector number 3: "+=> "
+    Selector number 4: Your name!
+Change your name in the name field.
+If you want to have a look at the code, scroll down, it's all found there.
+I apologize for writing in Python, I didn't know any other language that I could write in.
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### ---- IMPORTS ---- ####
 import os
 from base64 import standard_b64decode
@@ -69,7 +169,7 @@ print(startMessage)
 # main loop
 while True:
     # get user message
-    message = input('>>> ')
+    message = input(['>>> ', ' -> ', '>))>', '+=> ', f'{name}: '][selector])
     if message == '//help': # help command prints help
         print(f'You are currently running model {model} in NoAI. Here is a list of commands:')
         print(' - //quit: End the conversation.')
@@ -78,6 +178,7 @@ while True:
         print(' - //rewindAll: Move the conversation back all the way.')
         print(' - //switchModel [model]: Switch to the specified model. Models are as follows: llama, gemma, mistral.')
         print(' - //help: Display this message.')
+        continue
     elif message == '//quit': break # quit command ends loop
     elif message == '//regenerate': deleteMessages(1) # regenerate command deletes last response to get a new one
     elif message == '//rewind': deleteMessages(2); continue # rewind command deletes last user AND ai response
