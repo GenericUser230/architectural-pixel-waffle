@@ -115,9 +115,7 @@ startMessage = f'Welcome to NoAI! I am an AI of the model {model}. To view avail
 
 #### ---- MAIN PROGRAM ---- ####
 # api key and client setup
-apiKey = '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'
-# secure key: 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
-# backup key: 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
+apiKey = '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'
 client = Groq(api_key = apiKey)
 
 # model setup
